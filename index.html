@@ -1,1083 +1,1016 @@
 <!DOCTYPE html>
-<html lang="id">
+<html class="scroll-smooth" lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRIPLE AUDIO - Solusi Satu Atap Alat Event Profesional</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>TRIPLE AUDIO | Solusi Satu Atap Sewa Peralatan Teknis Event</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <style>
-        /* CSS RESET & VARIABLES */
-        :root {
-            --bg-dark: #0f172a;
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --accent: #facc15;
-            --text-main: #334155;
-            --text-light: #f8fafc;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --gray-bg: #f1f5f9;
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
+        .precision-border {
+            border: 1px solid #E2E8F0;
         }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-main);
-            background-color: #f8fafc;
-            line-height: 1.6;
+        .technical-row:nth-child(even) {
+            background-color: #F8FAFC;
         }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* UTILITIES */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 40px;
-            position: relative;
-            color: var(--bg-dark);
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        .badge {
-            background-color: var(--accent);
-            color: var(--bg-dark);
-            padding: 5px 12px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .time-badge {
-            background-color: #e2e8f0;
-            color: #334155;
-            font-size: 0.75rem;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-accent {
-            background-color: var(--accent);
-            color: var(--bg-dark);
-        }
-
-        .btn-accent:hover {
-            background-color: #eab308;
-            transform: translateY(-2px);
-        }
-
-        /* GRID SYSTEM */
-        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-
-        /* TABLE WRAPPER FOR RESPONSIVENESS */
         .table-wrapper {
-            width: 100%;
             overflow-x: auto;
-            margin: 20px 0 40px 0;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-            border: 1px solid var(--border-color);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            min-width: 650px;
-        }
-
-        th {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            padding: 16px;
-            font-weight: 600;
-        }
-
-        td {
-            padding: 16px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:nth-child(even) {
-            background-color: var(--gray-bg);
-        }
-
-        /* STICKY NAVBAR */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            padding: 15px 0;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: white;
-            letter-spacing: 0.5px;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 15px;
-        }
-
-        .nav-links a {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 5px 8px;
-            border-radius: 4px;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(135deg, var(--bg-dark) 0%, #1e293b 100%);
-            color: white;
-            padding: 100px 0 120px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-        }
-
-        .hero-badges {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .hero-badges .badge {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 20px;
-        }
-
-        /* PROMO BANNER */
-        .promo-banner {
-            background: linear-gradient(90deg, #b45309 0%, #d97706 100%);
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1rem;
-            box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* CONTACT BAR */
-        .contact-bar {
-            background-color: white;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-        }
-
-        .contact-bar-content {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 500;
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        /* CARDS GENERAL */
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 25px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-        }
-
-        /* PAKET HEMAT */
-        .paket-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .paket-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 5px;
-            background-color: var(--primary);
-        }
-
-        .paket-card.highlight::before {
-            background-color: var(--accent);
-        }
-
-        .paket-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--bg-dark);
-            margin-bottom: 10px;
-        }
-
-        .paket-price {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .paket-duration {
-            font-size: 0.85rem;
-            color: #64748b;
-            font-weight: 600;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-
-        .paket-features {
-            list-style: none;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-        }
-
-        .paket-features li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .paket-features li i {
-            color: #22c55e;
-            margin-top: 5px;
-        }
-
-        /* LENSA & TRIPOD, LIGHTING, TENDA */
-        .sub-section-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 25px 0 15px 0;
-            color: var(--bg-dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .item-list-card {
-            padding: 20px;
-        }
-
-        .item-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .item-row:last-child {
-            border-bottom: none;
-        }
-
-        .item-name {
-            font-weight: 600;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .item-price-wrapper {
-            text-align: right;
-        }
-
-        .item-price {
-            color: var(--primary);
-            font-weight: 700;
-            display: block;
-        }
-
-        /* CALL TO ACTION */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 35px auto;
-            opacity: 0.9;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: var(--bg-dark);
-            color: #94a3b8;
-            padding: 60px 0 30px 0;
-            border-top: 1px solid #1e293b;
-        }
-
-        footer h4 {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        footer p {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-
-        .footer-bottom {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #1e293b;
-            text-align: center;
-            font-size: 0.85rem;
-        }
-
-        /* FLOATING WHATSAPP */
-        .floating-wa {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 9999;
-            transition: all 0.3s ease;
-        }
-
-        .floating-wa:hover {
-            transform: scale(1.1);
-            background-color: #20ba5a;
-        }
-
-        /* RESPONSIVE MEDIA QUERIES */
-        @media (max-width: 1024px) {
-            .grid-4 { grid-template-columns: repeat(2, 1fr); }
-            .grid-3 { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                position: relative;
-            }
-            .nav-links {
-                display: none;
-            }
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
-            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 20px; }
-            .section-padding { padding: 50px 0; }
-            .contact-bar-content { flex-direction: column; align-items: flex-start; padding: 0 20px; }
-            .cta-section h2 { font-size: 1.8rem; }
+            -webkit-overflow-scrolling: touch;
         }
     </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1e3a8a",
+                        "on-primary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "secondary": "#515f74",
+                        "tertiary": "#002e44",
+                        "surface": "#f7f9fb",
+                        "primary": "#00236f",
+                        "accent-yellow": "#facc15"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "xs": "8px",
+                        "max-width": "1280px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "base": "4px",
+                        "margin-desktop": "auto"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "technical-data": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
 </head>
-<body>
+<body class="bg-background text-slate-800 font-body-md selection:bg-primary-container selection:text-on-primary">
 
-    <!-- STICKY NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">TRIPLE <span>AUDIO</span></a>
-            <ul class="nav-links">
-                <li><a href="#paket">Paket</a></li>
-                <li><a href="#kamera">Kamera</a></li>
-                <li><a href="#audio">Audio</a></li>
-                <li><a href="#tenda">Tenda & Panggung</a></li>
-                <li><a href="#genset">Genset</a></li>
-                <li><a href="#kabel">Kabel</a></li>
-                <li><a href="#modem">Modem</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-            </ul>
+    <nav class="bg-white top-0 sticky z-50 border-b border-slate-200 shadow-sm transition-all duration-200">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto h-16">
+            <a class="font-bold text-xl tracking-tight text-primary" href="#">TRIPLE <span class="text-blue-600">AUDIO</span></a>
+            <div class="hidden md:flex gap-md items-center font-body-md text-sm">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1" href="#paket-hemat">Paket Hemat</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#kamera">Kamera</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#audio">Sound System</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#tenda-panggung">Tenda & Panggung</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#genset">Genset</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#kabel">Kabel</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#terms">Ketentuan</a>
+            </div>
+            <div class="flex items-center gap-sm">
+                <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20sewa%20alat%20event." target="_blank" class="bg-primary text-on-primary px-5 py-2 rounded-lg text-sm font-bold hover:bg-primary-container transition-all">Rent Now</a>
+            </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="container">
-            <span class="badge" style="margin-bottom: 20px;">Premium Event Equipment</span>
-            <h1>Sewa Alat Event Lengkap + Profesional</h1>
-            <p>Drone, Kamera, Sound System, Tenda, Panggung, Lighting, Genset, Kabel, Modem Internet. Satu atap untuk semua kebutuhan acara Anda.</p>
-            <div class="hero-badges">
-                <span class="badge"><i class="fa-solid fa-truck"></i> Free antar 5km</span>
-                <span class="badge"><i class="fa-solid fa-clock"></i> 24 jam sewa</span>
-                <span class="badge"><i class="fa-solid fa-shield"></i> Garansi alat</span>
-                <span class="badge"><i class="fa-solid fa-wifi"></i> Modem & Internet</span>
+    <header class="relative overflow-hidden bg-primary-container py-xl md:py-24">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-lg items-center relative z-10">
+            <div>
+                <span class="inline-block bg-accent-yellow text-slate-900 px-4 py-1 rounded-full text-xs font-bold mb-md">PROMO SPESIAL</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-on-primary mb-sm leading-tight">Sewa Alat Event Lengkap + Profesional</h1>
+                <p class="text-base md:text-lg text-slate-200 mb-lg opacity-90">Drone, Kamera, Sound System, Tenda, Panggung, Lighting, Genset, Kabel, Modem Internet. Satu atap untuk semua kebutuhan acara Anda.</p>
+                <div class="flex flex-wrap gap-sm mb-lg">
+                    <span class="bg-white/10 text-white text-xs px-3 py-1.5 rounded-md font-medium border border-white/20"><i class="material-symbols-outlined text-xs align-middle mr-1">local_shipping</i>Free antar 5km</span>
+                    <span class="bg-white/10 text-white text-xs px-3 py-1.5 rounded-md font-medium border border-white/20"><i class="material-symbols-outlined text-xs align-middle mr-1">schedule</i>24 jam sewa</span>
+                    <span class="bg-white/10 text-white text-xs px-3 py-1.5 rounded-md font-medium border border-white/20"><i class="material-symbols-outlined text-xs align-middle mr-1">verified</i>Garansi alat</span>
+                    <span class="bg-white/10 text-white text-xs px-3 py-1.5 rounded-md font-medium border border-white/20"><i class="material-symbols-outlined text-xs align-middle mr-1">wifi</i>Modem & Internet</span>
+                </div>
+                <div class="flex flex-wrap gap-md">
+                    <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20konsultasi%20booking%20alat." target="_blank" class="bg-white text-primary px-6 py-3 rounded-lg font-bold shadow-lg hover:bg-slate-100 transition-all transform hover:-translate-y-1 text-center">Mulai Reservasi</a>
+                    <a href="#paket-hemat" class="border border-white/40 text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-all text-center">Lihat Paket</a>
+                </div>
+            </div>
+            <div class="relative h-[350px] md:h-[400px] rounded-xl overflow-hidden shadow-2xl border border-white/20">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMHUPuaySUWMNybIPdyifrkMm2OKFocMxXq90dzE8KIr30suk9x8ZvU89IoZEh-8aRJY3HW-1SeJgPQZvLYajwKIPCr1rcEtaMjF0m8d6ZL9vefQrfTIH1wrq9s-FS_iFPyRsYYMdGpTKT-v37sL0pQ6efrngGnToEye5lMpNnr2Ppe3uQC91TnzGx3kZeWVfoZRgGHIi6FjzvIbUrjESRyNjOsbRjfLjpcP_XXWWz_LNYoHJZugKHHg6c2XtEfLJ38VrKGju3nQ" alt="Professional Camera Rig Studio">
             </div>
         </div>
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
     </header>
 
-    <!-- PROMO BANNER -->
-    <div class="promo-banner">
-        <div class="container">
-            <i class="fa-solid fa-bullhorn"></i> PROMO SPESIAL: Booking minimal H-7 dapat diskon 10% | Sewa 3 hari gratis 1 hari (khusus tripod & lighting)
+    <div class="bg-amber-600 text-white py-3 font-semibold text-sm shadow-inner text-center">
+        <div class="max-w-max-width mx-auto px-margin-mobile">
+            <span class="material-symbols-outlined text-sm align-middle mr-1">campaign</span>
+            PROMO SPESIAL: Booking minimal H-7 dapat diskon 10% | Sewa 3 hari gratis 1 hari (khusus tripod & lighting)
         </div>
     </div>
 
-    <!-- CONTACT BAR -->
-    <div class="contact-bar">
-        <div class="container contact-bar-content">
-            <div class="contact-item">
-                <i class="fa-brands fa-whatsapp"></i>
+    <div class="bg-white border-b border-slate-200 py-4 shadow-sm">
+        <div class="max-w-max-width mx-auto px-margin-mobile grid grid-cols-1 sm:grid-cols-3 gap-md text-sm">
+            <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-primary text-xl">phone_iphone</span>
                 <div>
-                    <p style="font-size: 0.8rem; color: #64748b;">Hubungi Kami</p>
-                    <a href="https://wa.me/6289635225427" target="_blank" style="color: var(--bg-dark); font-weight: 700;">0896-3522-5427</a>
+                    <p class="text-xs text-slate-400 font-medium">WhatsApp Aktif Chat</p>
+                    <a href="https://wa.me/6289635225427" target="_blank" class="font-bold text-slate-800 hover:text-primary">0896-3522-5427</a>
                 </div>
             </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-location-dot"></i>
+            <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-primary text-xl">pin_drop</span>
                 <div>
-                    <p style="font-size: 0.8rem; color: #64748b;">Lokasi Workshop</p>
-                    <p style="color: var(--bg-dark); font-weight: 600;">JL. J.A. Suprapto 1A/249, Kota Malang</p>
+                    <p class="text-xs text-slate-400 font-medium">Alamat Workshop</p>
+                    <p class="font-bold text-slate-800">JL. J.A. Suprapto 1A/249</p>
                 </div>
             </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-credit-card"></i>
+            <div class="flex items-center gap-sm">
+                <span class="material-symbols-outlined text-primary text-xl">credit_card</span>
                 <div>
-                    <p style="font-size: 0.8rem; color: #64748b;">Metode Pembayaran</p>
-                    <p style="color: var(--bg-dark); font-weight: 600;">BCA, QRIS, Tunai</p>
+                    <p class="text-xs text-slate-400 font-medium">Metode Pembayaran</p>
+                    <p class="font-bold text-slate-800">BCA, QRIS, Tunai</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 4. PAKET HEMAT -->
-    <section id="paket" class="container section-padding">
-        <h2 class="section-title">Pilihan Paket Hemat</h2>
-        <div class="grid-3">
-            <!-- Paket 1 -->
-            <div class="card paket-card">
-                <div>
-                    <h3 class="paket-title">Paket Hemat</h3>
-                    <div class="paket-price">Rp1.300.000</div>
-                    <div class="paket-duration"><i class="fa-regular fa-clock"></i> Durasi: 1 Hari (24 Jam)</div>
-                    <ul class="paket-features">
-                        <li><i class="fa-solid fa-circle-check"></i> Tenda 3x3 (2 unit)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Kursi (50 unit)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Meja (10 unit) + Taplak</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Piring + Magicom</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20mau%20pesan%20Paket%20Hemat" class="btn btn-primary" target="_blank">Pesan Paket</a>
+    <main>
+        <section class="py-xl max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop transition-all duration-700" id="paket-hemat">
+            <div class="text-center mb-lg">
+                <h2 class="font-headline-lg text-2xl md:text-3xl text-primary font-bold mb-xs">PAKET HEMAT EVENT</h2>
+                <p class="text-slate-500 text-sm">Solusi ringkas, fungsional, dan hemat biaya operasional</p>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full mt-3"></div>
             </div>
-            <!-- Paket 2 -->
-            <div class="card paket-card highlight">
-                <div>
-                    <span class="badge" style="position: absolute; top: 15px; right: 15px;">Populer</span>
-                    <h3 class="paket-title">Paket Pernikahan</h3>
-                    <div class="paket-price">Rp5.000.000</div>
-                    <div class="paket-duration"><i class="fa-regular fa-clock"></i> Durasi: 1 Hari (24 Jam)</div>
-                    <ul class="paket-features">
-                        <li><i class="fa-solid fa-circle-check"></i> Tenda 6x8</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Kursi Sofia (100 unit)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Meja Bulat</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Pelaminan + Lampu Hias</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20mau%20pesan%20Paket%20Pernikahan" class="btn btn-accent" target="_blank">Pesan Paket</a>
-            </div>
-            <!-- Paket 3 -->
-            <div class="card paket-card">
-                <div>
-                    <h3 class="paket-title">Paket Seminar</h3>
-                    <div class="paket-price">Rp700.000</div>
-                    <div class="paket-duration"><i class="fa-regular fa-clock"></i> Durasi: 1 Hari (24 Jam)</div>
-                    <ul class="paket-features">
-                        <li><i class="fa-solid fa-circle-check"></i> Proyektor Full HD + Layar</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Mic Wireless Sennheiser</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Speaker Aktif</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20mau%20pesan%20Paket%20Seminar" class="btn btn-primary" target="_blank">Pesan Paket</a>
-            </div>
-            <!-- Paket 4 -->
-            <div class="card paket-card">
-                <div>
-                    <h3 class="paket-title">Paket Cinema</h3>
-                    <div class="paket-price">Rp1.200.000</div>
-                    <div class="paket-duration"><i class="fa-regular fa-clock"></i> Durasi: 1 Hari (24 Jam)</div>
-                    <ul class="paket-features">
-                        <li><i class="fa-solid fa-circle-check"></i> Blackmagic 4K</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Gimbal</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Shotgun Deity</li>
-                        <li><i class="fa-solid fa-circle-check"></i> LED Aputure</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20mau%20pesan%20Paket%20Cinema" class="btn btn-primary" target="_blank">Pesan Paket</a>
-            </div>
-            <!-- Paket 5 -->
-            <div class="card paket-card">
-                <div>
-                    <h3 class="paket-title">Paket Wedding Video</h3>
-                    <div class="paket-price">Rp650.000</div>
-                    <div class="paket-duration"><i class="fa-regular fa-clock"></i> Durasi: 1 Hari (24 Jam)</div>
-                    <ul class="paket-features">
-                        <li><i class="fa-solid fa-circle-check"></i> Canon 90D</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Lensa Sigma 18-35mm f/1.8</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Flash Godox V860 III</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Manfrotto Tripod</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20mau%20pesan%20Paket%20Wedding%20Video" class="btn btn-primary" target="_blank">Pesan Paket</a>
-            </div>
-            <!-- Paket 6 -->
-            <div class="card paket-card highlight">
-                <div>
-                    <h3 class="paket-title">Paket Konser Outdoor</h3>
-                    <div class="paket-price">Rp6.500.000</div>
-                    <div class="paket-duration"><i class="fa-regular fa-clock"></i> Durasi: 1 Hari (24 Jam)</div>
-                    <ul class="paket-features">
-                        <li><i class="fa-solid fa-circle-check"></i> Genset 25.000W</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Tenda Membrane 8x12</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Sound System 6.000W</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Panggung 6x8 + Lighting Show</li>
-                    </ul>
-                </div>
-                <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20mau%20pesan%20Paket%20Konser%20Outdoor" class="btn btn-accent" target="_blank">Pesan Paket</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. KAMERA, DRONE & CAMCORDER -->
-    <section id="kamera" class="container section-padding">
-        <h2 class="section-title">Kamera, Drone & Camcorder</h2>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Merek & Tipe</th>
-                        <th>Kategori</th>
-                        <th>Durasi Sewa</th>
-                        <th>Harga Sewa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Sony A7III (Full frame)</td><td><span class="badge" style="background-color: #cbd5e1;">Mirrorless</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp500.000</td></tr>
-                    <tr><td>Canon 90D + 18-55</td><td><span class="badge" style="background-color: #cbd5e1;">DSLR</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp300.000</td></tr>
-                    <tr><td>Blackmagic Pocket 4K</td><td><span class="badge" style="background-color: #93c5fd;">Cinema</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp600.000</td></tr>
-                    <tr><td>Sony FX30</td><td><span class="badge" style="background-color: #93c5fd;">Cinema Line</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp600.000</td></tr>
-                    <tr><td>DJI Mavic 3 Classic</td><td><span class="badge" style="background-color: #fde047;">Drone</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp500.000</td></tr>
-                    <tr><td>DJI Mini 3 Pro</td><td><span class="badge" style="background-color: #fde047;">Drone</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp250.000</td></tr>
-                    <tr><td>Sony PXW-Z90</td><td><span class="badge" style="background-color: #fca5a5;">Camcorder 4K Pro</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp500.000</td></tr>
-                    <tr><td>Canon XA50</td><td><span class="badge" style="background-color: #fca5a5;">Camcorder 4K</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp500.000</td></tr>
-                    <tr><td>GoPro Hero11 Black</td><td><span class="badge" style="background-color: #86efac;">Action Camera</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp150.000</td></tr>
-                    <tr><td>Insta360 X3</td><td><span class="badge" style="background-color: #86efac;">Action 360</span></td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp200.000</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 6. LENSA & TRIPOD -->
-        <div class="grid-2">
-            <div class="card item-list-card">
-                <h3 class="sub-section-title"><i class="fa-solid fa-camera"></i> Lensa Populer</h3>
-                <div class="item-row"><span class="item-name">Canon 50mm f/1.8 <small class="time-badge">Per Hari</small></span><span class="item-price">Rp75.000</span></div>
-                <div class="item-row"><span class="item-name">Canon 70-200 f/2.8L <small class="time-badge">Per Hari</small></span><span class="item-price">Rp350.000</span></div>
-                <div class="item-row"><span class="item-name">Sony 85mm f/1.4 GM <small class="time-badge">Per Hari</small></span><span class="item-price">Rp250.000</span></div>
-                <div class="item-row"><span class="item-name">Sigma 18-35mm f/1.8 Art <small class="time-badge">Per Hari</small></span><span class="item-price">Rp150.000</span></div>
-                <div class="item-row"><span class="item-name">Tokina 11-16mm f/2.8 <small class="time-badge">Per Hari</small></span><span class="item-price">Rp150.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <h3 class="sub-section-title"><i class="fa-solid fa-binoculars"></i> Tripod & Gimbal</h3>
-                <div class="item-row"><span class="item-name">Manfrotto Carbon <small class="time-badge">Per Hari</small></span><span class="item-price">Rp120.000</span></div>
-                <div class="item-row"><span class="item-name">DJI RS 3 Mini <small class="time-badge">Per Hari</small></span><span class="item-price">Rp250.000</span></div>
-                <div class="item-row"><span class="item-name">Zhiyun Weebill S <small class="time-badge">Per Hari</small></span><span class="item-price">Rp200.000</span></div>
-                <div class="item-row"><span class="item-name">Joby GorillaPod <small class="time-badge">Per Hari</small></span><span class="item-price">Rp35.000</span></div>
-                <div class="item-row"><span class="item-name">Tripod Heavy Duty <small class="time-badge">Per Hari</small></span><span class="item-price">Rp90.000</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. SOUND SYSTEM -->
-    <section id="audio" class="container section-padding">
-        <h2 class="section-title">Sound System & Audio</h2>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Paket Sound</th>
-                        <th>Daya RMS</th>
-                        <th>Harga / Watt</th>
-                        <th>Kapasitas Audiens</th>
-                        <th>Durasi Sewa</th>
-                        <th>Harga Sewa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Mini</td><td>200 watt</td><td>Rp750/watt</td><td>30-50 orang</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp150.000</td></tr>
-                    <tr><td>Small</td><td>400 watt</td><td>Rp625/watt</td><td>50-100 orang</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp250.000</td></tr>
-                    <tr><td>Medium</td><td>800 watt</td><td>Rp500/watt</td><td>100-150 orang</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp400.000</td></tr>
-                    <tr><td>Large</td><td>1.500 watt</td><td>Rp433/watt</td><td>150-250 orang</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp650.000</td></tr>
-                    <tr><td>Pro</td><td>3.000 watt</td><td>Rp333/watt</td><td>250-500 orang</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp1.000.000</td></tr>
-                    <tr><td>Stadium</td><td>6.000 watt</td><td>Rp300/watt</td><td>500-1000 orang</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp1.800.000</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h3 class="sub-section-title"><i class="fa-solid fa-microphone"></i> Mic & Audio Aksesoris</h3>
-        <div class="grid-3">
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Rode Wireless GO II <small class="time-badge">Per Hari</small></span><span class="item-price">Rp200.000</span></div>
-                <div class="item-row"><span class="item-name">Shure BLX288 (2 mic) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp150.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Sennheiser EW112P <small class="time-badge">Per Hari</small></span><span class="item-price">Rp350.000</span></div>
-                <div class="item-row"><span class="item-name">Zoom H1n Recorder <small class="time-badge">Per Hari</small></span><span class="item-price">Rp100.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">EV ZLX-12BT (400w) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp150.000</span></div>
-                <div class="item-row"><span class="item-name">Subwoofer Double 18" <small class="time-badge">Per Hari</small></span><span class="item-price">Rp400.000</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. LIGHTING -->
-    <section id="lighting" class="container section-padding">
-        <h2 class="section-title">Professional Lighting</h2>
-        <div class="grid-4">
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Neewer Ring Light 18" <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp70.000</div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Godox SL60W + Softbox <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp90.000</div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Aputure Amaran 200d <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp200.000</div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Godox V860 III Flash <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp100.000</div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Aputure MC RGB <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp80.000</div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Light Tube RGB 60cm <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp80.000</div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Softbox + Stand Pro <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp75.000</div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Reflector 5 in 1 <small class="time-badge">Per Hari</small></span></div>
-                <div class="item-price">Rp30.000</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. PROYEKTOR -->
-    <section id="proyektor" class="container section-padding">
-        <h2 class="section-title">Proyektor & Multimedia</h2>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Merek & Model</th>
-                        <th>Spesifikasi</th>
-                        <th>Durasi Sewa</th>
-                        <th>Harga Sewa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Epson EB-FH06</td><td>Full HD 3.500 lumens</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp200.000</td></tr>
-                    <tr><td>BenQ MH560</td><td>Full HD 4.000 lumens</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp200.000</td></tr>
-                    <tr><td>ViewSonic M1 Mini</td><td>Portable LED Projector</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp75.000</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="card">
-            <h4 style="margin-bottom: 15px; color: var(--bg-dark); font-weight:700;">Aksesoris Presentasi & Proyektor (Durasi Per Hari):</h4>
-            <div class="grid-3" style="gap: 15px;">
-                <div>Layar Tripod 60" : <strong class="item-price">Rp50.000</strong></div>
-                <div>Wireless Presenter : <strong class="item-price">Rp40.000</strong></div>
-                <div>Flipchart : <strong class="item-price">Rp60.000</strong></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. TENDA & 11. PANGGUNG -->
-    <section id="tenda" class="container section-padding">
-        <h2 class="section-title">Tenda & Panggung Event</h2>
-        
-        <div class="grid-2">
-            <div class="card item-list-card">
-                <h3 class="sub-section-title"><i class="fa-solid fa-campground"></i> Tenda Kerucut</h3>
-                <div class="item-row"><span class="item-name">Ukuran 3x4 m <small class="time-badge">Per Hari</small></span><span class="item-price">Rp180.000</span></div>
-                <div class="item-row"><span class="item-name">Ukuran 4x6 m <small class="time-badge">Per Hari</small></span><span class="item-price">Rp320.000</span></div>
-                <div class="item-row"><span class="item-name">Ukuran 6x8 m <small class="time-badge">Per Hari</small></span><span class="item-price">Rp650.000</span></div>
-                <div class="item-row"><span class="item-name">Ukuran 6x10 m <small class="time-badge">Per Hari</small></span><span class="item-price">Rp800.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <h3 class="sub-section-title"><i class="fa-solid fa-house"></i> Tenda Doma (Tanpa Tiang Tengah)</h3>
-                <div class="item-row"><span class="item-name">Ukuran 5x5 m <small class="time-badge">Per Hari</small></span><span class="item-price">Rp400.000</span></div>
-                <div class="item-row"><span class="item-name">Ukuran 6x8 m <small class="time-badge">Per Hari</small></span><span class="item-price">Rp750.000</span></div>
-                <div class="item-row"><span class="item-name">Ukuran 8x12 m <small class="time-badge">Per Hari</small></span><span class="item-price">Rp1.500.000</span></div>
-            </div>
-        </div>
-
-        <div class="card" style="margin-top: 30px;">
-            <h3 class="sub-section-title"><i class="fa-solid fa-layer-group"></i> Panggung & Karpet</h3>
-            <div class="grid-2">
-                <div>
-                    <div class="item-row"><span class="item-name">Panggung 3x3 m (Tinggi 50cm) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp400.000</span></div>
-                    <div class="item-row"><span class="item-name">Panggung 4x6 m (Tinggi 60cm) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp950.000</span></div>
-                </div>
-                <div>
-                    <div class="item-row"><span class="item-name">Panggung 6x8 m (Tinggi 100cm) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp2.000.000</span></div>
-                    <div class="item-row"><span class="item-name">Karpet Merah (3x4m) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp750.000</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 12. GENSET -->
-    <section id="genset" class="container section-padding">
-        <h2 class="section-title">Genset / Power Supply</h2>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Daya Listrik</th>
-                        <th>Kapasitas kVA</th>
-                        <th>Deposit Jaminan</th>
-                        <th>Durasi Sewa</th>
-                        <th>Harga Sewa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>900 watt</td><td>1 kVA</td><td>Rp500.000</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp100.000</td></tr>
-                    <tr><td>2.200 watt</td><td>2,5 kVA</td><td>Rp500.000</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp150.000</td></tr>
-                    <tr><td>3.500 watt</td><td>4 kVA</td><td>Rp500.000</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp200.000</td></tr>
-                    <tr><td>5.500 watt</td><td>6,5 kVA</td><td>Rp700.000</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp300.000</td></tr>
-                    <tr><td>9.000 watt</td><td>11 kVA</td><td>Rp1.000.000</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp450.000</td></tr>
-                    <tr><td>15.000 watt</td><td>18 kVA</td><td>Rp1.500.000</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp700.000</td></tr>
-                    <tr><td>25.000 watt</td><td>30 kVA</td><td>Rp2.000.000</td><td><span class="time-badge">Per Hari (24 Jam)</span></td><td class="item-price">Rp1.200.000</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- 13. KABEL & CONNECTOR -->
-    <section id="kabel" class="container section-padding">
-        <h2 class="section-title">Kabel & Connector Lengkap</h2>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Jenis Kabel / Adapter</th>
-                        <th>Pilihan Panjang</th>
-                        <th>Durasi Sewa</th>
-                        <th>Rentang Harga Sewa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>HDMI to HDMI (4K)</td><td>1m / 3m / 5m / 10m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp10.000 - Rp40.000</td></tr>
-                    <tr><td>HDMI Optical (Fiber)</td><td>15m / 20m / 30m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp80.000 - Rp180.000</td></tr>
-                    <tr><td>VGA to VGA</td><td>3m / 5m / 10m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp10.000 - Rp25.000</td></tr>
-                    <tr><td>DisplayPort to DisplayPort</td><td>2m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp20.000</td></tr>
-                    <tr><td>XLR (Mikrofon)</td><td>3m / 5m / 10m / 20m / 30m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp15.000 - Rp75.000</td></tr>
-                    <tr><td>AUX 3.5mm</td><td>1m / 3m / 5m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp5.000 - Rp15.000</td></tr>
-                    <tr><td>RCA to RCA</td><td>3m / 5m / 10m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp10.000 - Rp25.000</td></tr>
-                    <tr><td>Speakon (Speaker)</td><td>3m / 5m / 10m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp20.000 - Rp35.000</td></tr>
-                    <tr><td>Ethernet LAN Cat6</td><td>5m / 10m / 20m / 30m / 50m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp10.000 - Rp50.000</td></tr>
-                    <tr><td>Roll Kabel Power</td><td>10m / 20m / 30m / 50m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp20.000 - Rp70.000</td></tr>
-                    <tr><td>USB Extension</td><td>3m / 5m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp15.000 - Rp20.000</td></tr>
-                    <tr><td>USB-C to HDMI (Adapter)</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp35.000</td></tr>
-                    <tr><td>HDMI to VGA Converter (Aktif)</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp30.000</td></tr>
-                    <tr><td>USB-C Hub 4 in 1</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp50.000</td></tr>
-                    <tr><td>USB-C Hub 7 in 1</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp80.000</td></tr>
-                    <tr><td>Video Capture Card (HDMI to USB)</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp75.000</td></tr>
-                    <tr><td>Capture Card 4K</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp150.000</td></tr>
-                    <tr><td>HDMI Splitter (1 to 2)</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp40.000</td></tr>
-                    <tr><td>HDMI Splitter (1 to 4)</td><td>-</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp70.000</td></tr>
-                    <tr><td>SDI Cable (BNC)</td><td>10m / 20m / 30m</td><td><span class="time-badge">Per Hari</span></td><td class="item-price">Rp40.000 - Rp80.000</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- 14. MODEM, ROUTER & INTERNET -->
-    <section id="modem" class="container section-padding">
-        <h2 class="section-title">Modem, Router & Internet</h2>
-        
-        <div class="grid-3" style="margin-bottom: 30px;">
-            <div class="card item-list-card">
-                <h3 class="sub-section-title"><i class="fa-solid fa-wifi"></i> Modem 4G MiFi</h3>
-                <div class="item-row"><span>TP-Link M7200 <small class="time-badge">Per Hari</small></span><span class="item-price">Rp50.000</span></div>
-                <div class="item-row"><span>Huawei E5576 <small class="time-badge">Per Hari</small></span><span class="item-price">Rp50.000</span></div>
-                <div class="item-row"><span>Huawei E5785 (LCD) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp75.000</span></div>
-                <div class="item-row"><span>ZTE MF920U <small class="time-badge">Per Hari</small></span><span class="item-price">Rp50.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <h3 class="sub-section-title"><i class="fa-solid fa-tower-cell"></i> Modem 5G Fast</h3>
-                <div class="item-row"><span>Huawei 5G CPE Pro 2 <small class="time-badge">Per Hari</small></span><span class="item-price">Rp200.000</span></div>
-                <div class="item-row"><span>ZTE MC801A <small class="time-badge">Per Hari</small></span><span class="item-price">Rp175.000</span></div>
-                <div class="item-row"><span>Netgear Nighthawk M6 <small class="time-badge">Per Hari</small></span><span class="item-price">Rp300.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <h3 class="sub-section-title"><i class="fa-solid fa-network-wired"></i> Router & AP</h3>
-                <div class="item-row"><span>TP-Link Deco M4 (2u) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp100.000</span></div>
-                <div class="item-row"><span>TP-Link Deco X20 (3u) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp150.000</span></div>
-                <div class="item-row"><span>Ubiquiti UniFi AC Pro <small class="time-badge">Per Hari</small></span><span class="item-price">Rp75.000</span></div>
-            </div>
-        </div>
-
-        <h3 class="sub-section-title"><i class="fa-solid fa-toolbox"></i> Aksesoris Jaringan (Durasi Per Hari)</h3>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nama Item Aksesoris</th>
-                        <th>Harga Sewa</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Power Bank 10.000mAh / 20.000mAh</td><td class="item-price">Rp20.000 / Rp30.000</td></tr>
-                    <tr><td>Antena External 4G / Antena External 5G</td><td class="item-price">Rp40.000 / Rp80.000</td></tr>
-                    <tr><td>Waterproof Case Modem / Tiang Antena (3 meter)</td><td class="item-price">Rp25.000 / Rp50.000</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="promo-banner" style="background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 8px;">
-            <div class="container">
-                <i class="fa-solid fa-sim-card"></i> Kartu SIM tersedia (Telkomsel/Indosat/XL) | Paket Live Streaming mulai Rp150.000 / hari
-            </div>
-        </div>
-    </section>
-
-    <!-- 15. AKSESORIS PENDUKUNG -->
-    <section class="container section-padding">
-        <h2 class="section-title">Aksesoris Pendukung Event</h2>
-        <div class="grid-3">
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">SD Card 64GB <small class="time-badge">Per Hari</small></span><span class="item-price">Rp30.000</span></div>
-                <div class="item-row"><span class="item-name">CFast 128GB <small class="time-badge">Per Hari</small></span><span class="item-price">Rp80.000</span></div>
-                <div class="item-row"><span class="item-name">Baterai Ekstra Kamera <small class="time-badge">Per Hari</small></span><span class="item-price">Rp25.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Atomos Ninja V (Monitor 5") <small class="time-badge">Per Hari</small></span><span class="item-price">Rp200.000</span></div>
-                <div class="item-row"><span class="item-name">Karpet Tenda (Per meter) <small class="time-badge">Per Hari</small></span><span class="item-price">Rp15.000/m</span></div>
-                <div class="item-row"><span class="item-name">Lampu Gantung String <small class="time-badge">Per Hari</small></span><span class="item-price">Rp50.000</span></div>
-            </div>
-            <div class="card item-list-card">
-                <div class="item-row"><span class="item-name">Pagar Pembatas Panggung <small class="time-badge">Per Hari</small></span><span class="item-price">Rp25.000/m</span></div>
-                <div class="item-row"><span class="item-name">Kain Dinding Tenda <small class="time-badge">Per Hari</small></span><span class="item-price">Rp50.000</span></div>
-                <div class="item-row"><span class="item-name">Hardcase Pelican <small class="time-badge">Per Hari</small></span><span class="item-price">Rp75.000</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 16. KETENTUAN SEWA -->
-    <section class="container section-padding" style="padding-top: 0;">
-        <h2 class="section-title">Syarat & Ketentuan Sewa</h2>
-        <div class="card">
-            <div class="grid-2">
-                <div>
-                    <div class="item-row" style="align-items: flex-start;">
-                        <strong><i class="fa-solid fa-hourglass-half" style="color:var(--primary); margin-right:10px;"></i> Durasi Sewa Standar:</strong>
-                        <span style="text-align: right; max-width: 70%;">Hitungan sewa adalah per 1 hari (24 jam). Pengambilan unit H-1 jam 14.00, pengembalian wajib H+1 jam 14.00.</span>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+                <div class="bg-white precision-border rounded-xl flex flex-col justify-between hover:shadow-xl transition-all overflow-hidden border-t-4 border-t-primary">
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-primary">Paket Hemat</h3>
+                            <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Per 1 Hari (24 Jam)</span>
+                        </div>
+                        <div class="text-2xl font-extrabold text-blue-700 mb-4">Rp1.300.000</div>
+                        <ul class="space-y-2 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Tenda 3x3 (2 unit)</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Kursi 50 unit</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Meja 10 + Taplak</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Piring + Magicom</li>
+                        </ul>
                     </div>
-                    <div class="item-row">
-                        <strong><i class="fa-solid fa-id-card" style="color:var(--primary); margin-right:10px;"></i> Jaminan Deposit:</strong>
-                        <span style="text-align: right;">Kamera/Drone: 30% harga baru / KTP+SIM. Tenda: DP 50%.</span>
-                    </div>
-                    <div class="item-row">
-                        <strong><i class="fa-solid fa-triangle-exclamation" style="color:var(--primary); margin-right:10px;"></i> Denda Keterlambatan:</strong>
-                        <span style="text-align: right;">Rp50.000 - Rp100.000 / jam jika lewat dari batas durasi.</span>
+                    <div class="p-md bg-slate-50 border-t border-slate-100">
+                        <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20booking%20Paket%20Hemat%20Rp1.300.000" target="_blank" class="block w-full bg-primary text-white text-center py-2 rounded-md font-semibold text-xs hover:bg-primary-container transition-all">Pesan Paket</a>
                     </div>
                 </div>
-                <div>
-                    <div class="item-row">
-                        <strong><i class="fa-solid fa-screwdriver-wrench" style="color:var(--primary); margin-right:10px;"></i> Kerusakan Alat:</strong>
-                        <span style="text-align: right;">Wajib service resmi / ganti rugi sesuai harga pasar komponen tersebut.</span>
+
+                <div class="bg-white precision-border rounded-xl flex flex-col justify-between hover:shadow-xl transition-all overflow-hidden border-t-4 border-t-amber-500 shadow-md">
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-primary">Paket Pernikahan</h3>
+                            <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Per 1 Hari (24 Jam)</span>
+                        </div>
+                        <div class="text-2xl font-extrabold text-blue-700 mb-4">Rp5.000.000</div>
+                        <ul class="space-y-2 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Tenda 6x8</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Kursi Sofia 100 unit</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Meja Bulat + Pelaminan</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Dekorasi Lampu Hias</li>
+                        </ul>
                     </div>
-                    <div class="item-row">
-                        <strong><i class="fa-solid fa-car" style="color:var(--primary); margin-right:10px;"></i> Biaya Antar:</strong>
-                        <span style="text-align: right;">Gratis radius 5km dari workshop. Luar kota dikenakan Rp10.000 / km.</span>
+                    <div class="p-md bg-slate-50 border-t border-slate-100">
+                        <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20booking%20Paket%20Pernikahan%20Rp5.000.000" target="_blank" class="block w-full bg-amber-500 text-slate-900 text-center py-2 rounded-md font-bold text-xs hover:bg-amber-600 transition-all">Pesan Paket</a>
                     </div>
-                    <div class="item-row">
-                        <strong><i class="fa-solid fa-gas-pump" style="color:var(--primary); margin-right:10px;"></i> Bahan Bakar Genset:</strong>
-                        <span style="text-align: right;">BBM ditanggung sepenuhnya oleh pihak penyewa.</span>
+                </div>
+
+                <div class="bg-white precision-border rounded-xl flex flex-col justify-between hover:shadow-xl transition-all overflow-hidden border-t-4 border-t-primary">
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-primary">Paket Seminar</h3>
+                            <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Per 1 Hari (24 Jam)</span>
+                        </div>
+                        <div class="text-2xl font-extrabold text-blue-700 mb-4">Rp700.000</div>
+                        <ul class="space-y-2 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Proyektor Full HD + Layar</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Mic Wireless Sennheiser</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>System Speaker Aktif</li>
+                        </ul>
+                    </div>
+                    <div class="p-md bg-slate-50 border-t border-slate-100">
+                        <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20booking%20Paket%20Seminar%20Rp700.000" target="_blank" class="block w-full bg-primary text-white text-center py-2 rounded-md font-semibold text-xs hover:bg-primary-container transition-all">Pesan Paket</a>
+                    </div>
+                </div>
+
+                <div class="bg-white precision-border rounded-xl flex flex-col justify-between hover:shadow-xl transition-all overflow-hidden border-t-4 border-t-primary">
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-primary">Paket Cinema</h3>
+                            <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Per 1 Hari (24 Jam)</span>
+                        </div>
+                        <div class="text-2xl font-extrabold text-blue-700 mb-4">Rp1.200.000</div>
+                        <ul class="space-y-2 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Blackmagic 4K + Gimbal</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Shotgun Microphone Deity</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>LED Production Aputure</li>
+                        </ul>
+                    </div>
+                    <div class="p-md bg-slate-50 border-t border-slate-100">
+                        <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20booking%20Paket%20Cinema%20Rp1.200.000" target="_blank" class="block w-full bg-primary text-white text-center py-2 rounded-md font-semibold text-xs hover:bg-primary-container transition-all">Pesan Paket</a>
+                    </div>
+                </div>
+
+                <div class="bg-white precision-border rounded-xl flex flex-col justify-between hover:shadow-xl transition-all overflow-hidden border-t-4 border-t-primary">
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-primary">Paket Wedding Video</h3>
+                            <span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Per 1 Hari (24 Jam)</span>
+                        </div>
+                        <div class="text-2xl font-extrabold text-blue-700 mb-4">Rp650.000</div>
+                        <ul class="space-y-2 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Canon 90D + Sigma 18-35mm</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Speedlite Godox V860 III</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Tripod Profesional Manfrotto</li>
+                        </ul>
+                    </div>
+                    <div class="p-md bg-slate-50 border-t border-slate-100">
+                        <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20booking%20Paket%20Wedding%20Video%20Rp650.000" target="_blank" class="block w-full bg-primary text-white text-center py-2 rounded-md font-semibold text-xs hover:bg-primary-container transition-all">Pesan Paket</a>
+                    </div>
+                </div>
+
+                <div class="bg-white precision-border rounded-xl flex flex-col justify-between hover:shadow-xl transition-all overflow-hidden border-t-4 border-t-amber-500">
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-primary">Paket Konser Outdoor</h3>
+                            <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Per 1 Hari (24 Jam)</span>
+                        </div>
+                        <div class="text-2xl font-extrabold text-blue-700 mb-4">Rp6.500.000</div>
+                        <ul class="space-y-2 text-sm text-slate-600 border-t border-slate-100 pt-3">
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Genset Silent 25.000 watt</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Tenda Membrane 8x12 m</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Sound System Rig 6.000 watt</li>
+                            <li class="flex items-center gap-xs"><span class="material-symbols-outlined text-green-600 text-sm font-bold">check</span>Panggung 6x8 m + Lighting Show</li>
+                        </ul>
+                    </div>
+                    <div class="p-md bg-slate-50 border-t border-slate-100">
+                        <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20booking%20Paket%20Konser%20Outdoor%20Rp6.500.000" target="_blank" class="block w-full bg-amber-500 text-slate-900 text-center py-2 rounded-md font-bold text-xs hover:bg-amber-600 transition-all">Pesan Paket</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 17. CALL TO ACTION -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Butuh rekomendasi paket lengkap?</h2>
-            <p>Tim TRIPLE AUDIO siap membantu konsultasi gratis & kustomisasi alokasi alat sesuai dengan anggaran serta konsep acara Anda.</p>
-            <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20ingin%20konsultasi%20paket%20alat%20event" class="btn btn-accent" target="_blank"><i class="fa-brands fa-whatsapp"></i> Chat WA Sekarang</a>
-        </div>
-    </section>
+        <section class="py-xl bg-surface" id="kamera">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex justify-between items-end mb-lg">
+                    <div>
+                        <h2 class="font-headline-lg text-2xl font-bold text-primary">KAMERA, DRONE & CAMCORDER</h2>
+                        <p class="text-slate-500 text-sm mt-1">Sistem perekaman visual resolusi tinggi untuk standardisasi penyiaran/event</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded text-xs font-bold">DURASI PER 1 HARI (24 JAM)</span>
+                </div>
+                
+                <div class="bg-white precision-border rounded-xl overflow-hidden shadow-sm table-wrapper">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-800 text-white text-xs uppercase tracking-wider">
+                                <th class="p-md font-semibold">Merek & Tipe Peralatan</th>
+                                <th class="p-md font-semibold">Kategori Spesifikasi</th>
+                                <th class="p-md font-semibold">Durasi Sewa</th>
+                                <th class="p-md font-semibold text-right">Harga Sewa / Hari</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm font-medium text-slate-700">
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">Sony A7III (Full Frame)</td>
+                                <td class="p-md"><span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-semibold">Mirrorless</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp500.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">Canon 90D + Lensa 18-55mm</td>
+                                <td class="p-md"><span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-semibold">DSLR</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp300.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">Blackmagic Pocket Cinema Camera 4K</td>
+                                <td class="p-md"><span class="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded font-semibold">Cinema Production</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp600.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">Sony FX30</td>
+                                <td class="p-md"><span class="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded font-semibold">Cinema Line</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp600.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">DJI Mavic 3 Classic</td>
+                                <td class="p-md"><span class="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded font-semibold">Drone Quadcopter</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp500.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">DJI Mini 3 Pro</td>
+                                <td class="p-md"><span class="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded font-semibold">Drone Compact</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp250.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">Sony PXW-Z90</td>
+                                <td class="p-md"><span class="bg-red-100 text-red-700 text-xs px-2 py-0.5 rounded font-semibold">Camcorder 4K Pro</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp500.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">Canon XA50</td>
+                                <td class="p-md"><span class="bg-red-100 text-red-700 text-xs px-2 py-0.5 rounded font-semibold">Camcorder 4K Broadcast</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp500.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">GoPro Hero11 Black</td>
+                                <td class="p-md"><span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-semibold">Action Camera</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp150.000</td>
+                            </tr>
+                            <tr class="technical-row">
+                                <td class="p-md font-bold text-slate-900">Insta360 X3</td>
+                                <td class="p-md"><span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded font-semibold">Action 360 Camera</span></td>
+                                <td class="p-md text-slate-400 text-xs">24 Jam (Ambil H-1 Kembali H+1)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp200.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-    <!-- 18. FOOTER -->
-    <footer id="kontak">
-        <div class="container grid-3">
-            <div>
-                <h4>TRIPLE AUDIO</h4>
-                <p><i class="fa-solid fa-location-dot"></i> JL. J.A. Suprapto 1A/249, Kota Malang</p>
-                <p><i class="fa-solid fa-phone"></i> 0896-3522-5427</p>
-                <p><i class="fa-solid fa-envelope"></i> rentvision@event.id</p>
-                <p><i class="fa-brands fa-instagram"></i> @audio_triple</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-lg mt-md">
+                    <div class="bg-white precision-border rounded-xl p-md shadow-sm">
+                        <h3 class="text-md font-bold text-primary mb-sm border-b border-slate-100 pb-2 flex justify-between items-center">
+                            <span>Lensa Populer Optik</span>
+                            <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">Sewa Per Hari</span>
+                        </h3>
+                        <div class="space-y-sm text-sm">
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Canon 50mm f/1.8</span><span class="font-bold text-primary">Rp75.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Canon 70-200 f/2.8L</span><span class="font-bold text-primary">Rp350.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Sony 85mm f/1.4 GM</span><span class="font-bold text-primary">Rp250.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Sigma 18-35mm f/1.8 Art</span><span class="font-bold text-primary">Rp150.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Tokina 11-16mm f/2.8</span><span class="font-bold text-primary">Rp150.000</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-white precision-border rounded-xl p-md shadow-sm">
+                        <h3 class="text-md font-bold text-primary mb-sm border-b border-slate-100 pb-2 flex justify-between items-center">
+                            <span>Tripod & Gimbal Stabilizer</span>
+                            <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">Sewa Per Hari</span>
+                        </h3>
+                        <div class="space-y-sm text-sm">
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Manfrotto Carbon System</span><span class="font-bold text-primary">Rp120.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>DJI RS 3 Mini Gimbal</span><span class="font-bold text-primary">Rp250.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Zhiyun Weebill S Gimbal</span><span class="font-bold text-primary">Rp200.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Joby GorillaPod Rigid</span><span class="font-bold text-primary">Rp35.000</span></div>
+                            <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Tripod System Heavy Duty</span><span class="font-bold text-primary">Rp90.000</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h4>Jam Operasional</h4>
-                <p>Senin - Minggu: 08.00 - 21.00 WIB</p>
-                <p style="color: var(--accent);"><i class="fa-solid fa-info-circle"></i> Pengambilan alat dilayani H-1 sore hari.</p>
+        </section>
+
+        <section class="py-xl max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop" id="audio">
+            <div class="text-center mb-lg">
+                <h2 class="font-headline-lg text-2xl md:text-3xl text-primary font-bold mb-xs">SOUND SYSTEM AKUSTIK & KONSER</h2>
+                <p class="text-slate-500 text-sm">Kalkulasi daya RMS linier transparan untuk akurasi jangkauan audiens acara</p>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full mt-3"></div>
             </div>
-            <div>
-                <h4>Sistem Pembayaran</h4>
-                <p>Menerima pembayaran melalui: Cash/Tunai, Transfer BCA, dan QRIS.</p>
-                <p><strong style="color: white;">Ketentuan Booking:</strong> DP Minimal 50% untuk mengamankan jadwal alat.</p>
+
+            <div class="bg-white precision-border rounded-xl overflow-hidden shadow-sm table-wrapper mb-md">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wider">
+                            <th class="p-md font-semibold">Skala Paket Sound</th>
+                            <th class="p-md font-semibold">Kapasitas Daya RMS</th>
+                            <th class="p-md font-semibold">Harga per Watt</th>
+                            <th class="p-md font-semibold">Batas Kapasitas Orang</th>
+                            <th class="p-md font-semibold">Durasi Sewa</th>
+                            <th class="p-md font-semibold text-right">Harga Sewa / Hari</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-medium text-slate-700">
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Mini</td>
+                            <td class="p-md">200 watt</td>
+                            <td class="p-md">Rp750 / watt</td>
+                            <td class="p-md">30 - 50 orang</td>
+                            <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp150.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Small</td>
+                            <td class="p-md">400 watt</td>
+                            <td class="p-md">Rp625 / watt</td>
+                            <td class="p-md">50 - 100 orang</td>
+                            <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp250.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Medium</td>
+                            <td class="p-md">800 watt</td>
+                            <td class="p-md">Rp500 / watt</td>
+                            <td class="p-md">100 - 150 orang</td>
+                            <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp400.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Large</td>
+                            <td class="p-md">1.500 watt</td>
+                            <td class="p-md">Rp433 / watt</td>
+                            <td class="p-md">150 - 250 orang</td>
+                            <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp650.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Pro</td>
+                            <td class="p-md">3.000 watt</td>
+                            <td class="p-md">Rp333 / watt</td>
+                            <td class="p-md">250 - 500 orang</td>
+                            <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp1.000.000</td>
+                        </tr>
+                        <tr class="technical-row">
+                            <td class="p-md font-bold text-slate-900">Stadium</td>
+                            <td class="p-md">6.000 watt</td>
+                            <td class="p-md">Rp300 / watt</td>
+                            <td class="p-md">500 - 1000 orang</td>
+                            <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp1.800.000</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 TRIPLE AUDIO – Solusi alat pesta, foto video, sound, kabel, modem & event.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+                <div class="precision-border p-md rounded-xl bg-white shadow-sm">
+                    <h4 class="font-bold text-primary text-sm mb-xs">Rode Wireless GO II <span class="text-[10px] font-normal text-slate-400 block">Sewa Per Hari</span></h4>
+                    <p class="text-xl font-extrabold text-blue-700">Rp200.000</p>
+                </div>
+                <div class="precision-border p-md rounded-xl bg-white shadow-sm">
+                    <h4 class="font-bold text-primary text-sm mb-xs">Shure BLX288 (Dual Handheld Mic) <span class="text-[10px] font-normal text-slate-400 block">Sewa Per Hari</span></h4>
+                    <p class="text-xl font-extrabold text-blue-700">Rp150.000</p>
+                </div>
+                <div class="precision-border p-md rounded-xl bg-white shadow-sm">
+                    <h4 class="font-bold text-primary text-sm mb-xs">Sennheiser EW112P Clip On <span class="text-[10px] font-normal text-slate-400 block">Sewa Per Hari</span></h4>
+                    <p class="text-xl font-extrabold text-blue-700">Rp350.000</p>
+                </div>
+                <div class="precision-border p-md rounded-xl bg-white shadow-sm">
+                    <h4 class="font-bold text-primary text-sm mb-xs">Zoom H1n Handy Field Recorder <span class="text-[10px] font-normal text-slate-400 block">Sewa Per Hari</span></h4>
+                    <p class="text-xl font-extrabold text-blue-700">Rp100.000</p>
+                </div>
+                <div class="precision-border p-md rounded-xl bg-white shadow-sm">
+                    <h4 class="font-bold text-primary text-sm mb-xs">EV ZLX-12BT Active Speaker (400w) <span class="text-[10px] font-normal text-slate-400 block">Sewa Per Hari</span></h4>
+                    <p class="text-xl font-extrabold text-blue-700">Rp150.000</p>
+                </div>
+                <div class="precision-border p-md rounded-xl bg-white shadow-sm">
+                    <h4 class="font-bold text-primary text-sm mb-xs">Subwoofer Double 18" High Output <span class="text-[10px] font-normal text-slate-400 block">Sewa Per Hari</span></h4>
+                    <p class="text-xl font-extrabold text-blue-700">Rp400.000</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl bg-slate-900 text-white" id="lighting">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-lg">
+                    <h2 class="text-2xl md:text-3xl text-amber-500 font-bold mb-xs">PROFESSIONAL LIGHTING FIXTURES</h2>
+                    <p class="text-slate-400 text-sm">Sistem pencahayaan panggung, dekorasi, studio foto, dan video broadcast (Harga Per Hari)</p>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mt-3"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Neewer Ring Light 18"</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp70.000</span>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Godox SL60W + Softbox</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp90.000</span>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Aputure Amaran 200d</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp200.000</span>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Godox V860 III Flash</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp100.000</span>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Aputure MC RGB Compact</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp80.000</span>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Light Tube RGB 60cm</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp80.000</span>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Softbox + Stand Pro</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp75.000</span>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 p-md rounded-xl flex justify-between items-center">
+                        <div><h4 class="font-semibold text-sm">Reflector 5 in 1 Kit</h4><span class="text-[10px] text-slate-400 block mt-1">Durasi 1 Hari</span></div>
+                        <span class="text-amber-400 font-bold text-sm">Rp30.000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl bg-surface" id="proyektor">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <h2 class="font-headline-lg text-2xl font-bold text-primary mb-sm">PROYEKTOR & MULTIMEDIA PRESENTASI</h2>
+                <p class="text-slate-500 text-sm mb-md">Sistem output proyeksi tinggi ANSI Lumens tajam untuk kebutuhan visual konferensi</p>
+                
+                <div class="bg-white precision-border rounded-xl overflow-hidden shadow-sm table-wrapper mb-md">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-800 text-white text-xs uppercase tracking-wider">
+                                <th class="p-md font-semibold">Tipe Proyektor</th>
+                                <th class="p-md font-semibold">Kapasitas Kecerahan / Output</th>
+                                <th class="p-md font-semibold">Durasi Sewa</th>
+                                <th class="p-md font-semibold text-right">Harga Sewa / Hari</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm font-medium text-slate-700">
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">Epson EB-FH06</td>
+                                <td class="p-md">Full HD 1080p, 3.500 Lumens</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp200.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">BenQ MH560</td>
+                                <td class="p-md">Full HD 1080p, 4.000 Lumens</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp200.000</td>
+                            </tr>
+                            <tr class="technical-row">
+                                <td class="p-md font-bold text-slate-900">ViewSonic M1 Mini</td>
+                                <td class="p-md">Ultra Portable, LED Engine System</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp75.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 p-md rounded-xl">
+                    <h4 class="font-bold text-primary text-sm mb-sm uppercase tracking-wide">Aksesoris Tambahan Pendukung Presentasi (Harga Per Hari):</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-sm text-sm text-slate-700 font-semibold">
+                        <div class="p-2 bg-white rounded shadow-sm border border-slate-100 flex justify-between"><span>Layar Tripod 60"</span><span class="text-blue-700">Rp50.000</span></div>
+                        <div class="p-2 bg-white rounded shadow-sm border border-slate-100 flex justify-between"><span>Wireless Presenter / Clicker</span><span class="text-blue-700">Rp40.000</span></div>
+                        <div class="p-2 bg-white rounded shadow-sm border border-slate-100 flex justify-between"><span>Flipchart Board</span><span class="text-blue-700">Rp60.000</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop" id="tenda-panggung">
+            <div class="text-center mb-lg">
+                <h2 class="font-headline-lg text-2xl md:text-3xl text-primary font-bold mb-xs">TENDA & STRUKTUR PANGGUNG</h2>
+                <p class="text-slate-500 text-sm">Konstruksi luar ruangan/dalam ruangan kokoh standar keamanan beban tinggi</p>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full mt-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-lg mb-md">
+                <div class="bg-white precision-border rounded-xl p-md">
+                    <h3 class="font-bold text-slate-900 border-b pb-2 mb-sm flex justify-between items-center text-sm uppercase tracking-wider">
+                        <span>Tenda Kerucut / Sarnafil</span><span class="text-[10px] text-slate-400 font-bold">Per Hari</span>
+                    </h3>
+                    <div class="space-y-sm text-sm font-medium">
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Ukuran Dimensi 3x4 m</span><span class="text-primary font-bold">Rp180.000</span></div>
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Ukuran Dimensi 4x6 m</span><span class="text-primary font-bold">Rp320.000</span></div>
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Ukuran Dimensi 6x8 m</span><span class="text-primary font-bold">Rp650.000</span></div>
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Ukuran Dimensi 6x10 m</span><span class="text-primary font-bold">Rp800.000</span></div>
+                    </div>
+                </div>
+                <div class="bg-white precision-border rounded-xl p-md">
+                    <h3 class="font-bold text-slate-900 border-b pb-2 mb-sm flex justify-between items-center text-sm uppercase tracking-wider">
+                        <span>Tenda Doma (Bebas Tiang Tengah)</span><span class="text-[10px] text-slate-400 font-bold">Per Hari</span>
+                    </h3>
+                    <div class="space-y-sm text-sm font-medium">
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Ukuran Dimensi 5x5 m</span><span class="text-primary font-bold">Rp400.000</span></div>
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Ukuran Dimensi 6x8 m</span><span class="text-primary font-bold">Rp750.000</span></div>
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Ukuran Dimensi 8x12 m</span><span class="text-primary font-bold">Rp1.500.000</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white precision-border rounded-xl p-md">
+                <h3 class="font-bold text-slate-900 border-b pb-2 mb-sm text-sm uppercase tracking-wider">MODUL DEK PANGGUNG RIGGING & ALAS (DURASI PER HARI)</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-md text-sm font-medium">
+                    <div class="space-y-sm">
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Panggung Modul 3x3 m (Tinggi 50cm)</span><span class="text-primary font-bold">Rp400.000</span></div>
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Panggung Modul 4x6 m (Tinggi 60cm)</span><span class="text-primary font-bold">Rp950.000</span></div>
+                    </div>
+                    <div class="space-y-sm">
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Panggung Modul 6x8 m (Tinggi 100cm)</span><span class="text-primary font-bold">Rp2.000.000</span></div>
+                        <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Hampasan Karpet Merah Premium (3x4m)</span><span class="text-primary font-bold">Rp750.000</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl bg-surface" id="genset">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <h2 class="font-headline-lg text-2xl font-bold text-primary mb-sm">GENSET POWER SUPPLY & UTILITAS LISTRIK</h2>
+                <p class="text-slate-500 text-sm mb-md">Sistem pembangkit daya mekanis cadangan silent murni untuk kelancaran supply tegangan arus event</p>
+                
+                <div class="bg-white precision-border rounded-xl overflow-hidden shadow-sm table-wrapper">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-800 text-white text-xs uppercase tracking-wider">
+                                <th class="p-md font-semibold">Kapasitas Daya Output</th>
+                                <th class="p-md font-semibold">Output Nilai kVA</th>
+                                <th class="p-md font-semibold">Deposit Jaminan Wajib</th>
+                                <th class="p-md font-semibold">Durasi Sewa</th>
+                                <th class="p-md font-semibold text-right">Harga Sewa / Hari</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm font-medium text-slate-700">
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">900 watt</td>
+                                <td class="p-md">1 kVA</td>
+                                <td class="p-md">Rp500.000</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp100.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">2.200 watt</td>
+                                <td class="p-md">2.5 kVA</td>
+                                <td class="p-md">Rp500.000</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp150.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">3.500 watt</td>
+                                <td class="p-md">4 kVA</td>
+                                <td class="p-md">Rp500.000</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp200.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">5.500 watt</td>
+                                <td class="p-md">6.5 kVA</td>
+                                <td class="p-md">Rp700.000</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp300.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">9.000 watt</td>
+                                <td class="p-md">11 kVA</td>
+                                <td class="p-md">Rp1.000.000</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp450.000</td>
+                            </tr>
+                            <tr class="technical-row border-b border-slate-200">
+                                <td class="p-md font-bold text-slate-900">15.000 watt</td>
+                                <td class="p-md">18 kVA</td>
+                                <td class="p-md">Rp1.500.000</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp700.000</td>
+                            </tr>
+                            <tr class="technical-row">
+                                <td class="p-md font-bold text-slate-900">25.000 watt</td>
+                                <td class="p-md">30 kVA</td>
+                                <td class="p-md">Rp2.000.000</td>
+                                <td class="p-md text-slate-400 text-xs">Per 1 Hari (24 Jam)</td>
+                                <td class="p-md text-right font-extrabold text-blue-700">Rp1.200.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop" id="kabel">
+            <h2 class="font-headline-lg text-2xl font-bold text-primary mb-sm">TABEL INTERKONEKSI KABEL & KONNEKTOR TEKNIS</h2>
+            <p class="text-slate-500 text-sm mb-md">Sistem penghubung sinyal data, audio analog, digital, dan distribusi kelistrikan panggung</p>
+            
+            <div class="bg-white precision-border rounded-xl overflow-hidden shadow-sm table-wrapper">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-800 text-white text-xs uppercase tracking-wider">
+                            <th class="p-md font-semibold">Jenis Infrastruktur Kabel</th>
+                            <th class="p-md font-semibold">Opsi Panjang Kabel</th>
+                            <th class="p-md font-semibold">Durasi Sewa</th>
+                            <th class="p-md font-semibold text-right">Rentang Harga Sewa / Hari</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-medium text-slate-700">
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">HDMI to HDMI (High Speed 4K)</td>
+                            <td class="p-md">1 meter / 3 meter / 5 meter / 10 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp10.000 - Rp40.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">HDMI Optical Pure Fiber Active Cable</td>
+                            <td class="p-md">15 meter / 20 meter / 30 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp80.000 - Rp180.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">VGA to VGA D-Sub Shielded</td>
+                            <td class="p-md">3 meter / 5 meter / 10 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp10.000 - Rp25.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">DisplayPort to DisplayPort Cable</td>
+                            <td class="p-md">2 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp20.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">XLR Balance Microphone Cable</td>
+                            <td class="p-md">3m / 5m / 10m / 20m / 30m</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp15.000 - Rp75.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">AUX TRS 3.5mm Male to Male Stereo</td>
+                            <td class="p-md">1 meter / 3 meter / 5 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp5.000 - Rp15.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">RCA to RCA Coaxial Connector Cable</td>
+                            <td class="p-md">3 meter / 5 meter / 10 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp10.000 - Rp25.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Speakon to Speakon Speaker Cable (High Load)</td>
+                            <td class="p-md">3 meter / 5 meter / 10 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp20.000 - Rp35.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Ethernet UTP LAN Cat6 Pure Copper</td>
+                            <td class="p-md">5m / 10m / 20m / 30m / 50m</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp10.000 - Rp50.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Roll Kabel Extension Power Arus Listrik</td>
+                            <td class="p-md">10m / 20m / 30m / 50m</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp20.000 - Rp70.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">USB Extension Signal Booster Cable</td>
+                            <td class="p-md">3 meter / 5 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp15.000 - Rp20.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">USB-C to HDMI Digital Converter Adapter</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp35.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">HDMI to VGA Converter Aktif Chipset</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp30.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">USB-C Multiport Hub 4 in 1 System</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp50.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">USB-C Multiport Hub 7 in 1 Extended</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp80.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Video Capture Card Cam Link (HDMI to USB)</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp75.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">Video Capture Card High-Grade 4K Stream</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp150.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">HDMI Splitter Distribution (1 In to 2 Out)</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp40.000</td>
+                        </tr>
+                        <tr class="technical-row border-b border-slate-200">
+                            <td class="p-md font-bold text-slate-900">HDMI Splitter Distribution (1 In to 4 Out)</td>
+                            <td class="p-md">- (Unit Modul)</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp70.000</td>
+                        </tr>
+                        <tr class="technical-row">
+                            <td class="p-md font-bold text-slate-900">SDI Coaxial High-Frequency Cable (BNC)</td>
+                            <td class="p-md">10 meter / 20 meter / 30 meter</td>
+                            <td class="p-md text-slate-400 text-xs">1 Hari (24 Jam)</td>
+                            <td class="p-md text-right font-extrabold text-blue-700">Rp40.000 - Rp80.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="py-xl bg-surface" id="modem">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <h2 class="font-headline-lg text-2xl font-bold text-primary mb-sm">MODEM, WIRELESS ROUTER & ACCESS POINT JARINGAN</h2>
+                <p class="text-slate-500 text-sm mb-lg">Infrastruktur jaringan nirkabel stabil performa tinggi untuk kelancaran live streaming sistem acara</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+                    <div class="bg-white precision-border p-md rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary text-sm mb-xs uppercase tracking-wide">Modem 4G MiFi (Per Hari)</h3>
+                        <div class="space-y-xs text-sm font-medium mt-3 text-slate-700">
+                            <div class="flex justify-between border-b border-slate-100 pb-1"><span>TP-Link M7200</span><span class="text-blue-700 font-bold">Rp50.000</span></div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1"><span>Huawei E5576</span><span class="text-blue-700 font-bold">Rp50.000</span></div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1"><span>Huawei E5785 (With LCD Screen)</span><span class="text-blue-700 font-bold">Rp75.000</span></div>
+                            <div class="flex justify-between"><span>ZTE MF920U</span><span class="text-blue-700 font-bold">Rp50.000</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-white precision-border p-md rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary text-sm mb-xs uppercase tracking-wide">Modem 5G CPE (Per Hari)</h3>
+                        <div class="space-y-xs text-sm font-medium mt-3 text-slate-700">
+                            <div class="flex justify-between border-b border-slate-100 pb-1"><span>Huawei 5G CPE Pro 2</span><span class="text-blue-700 font-bold">Rp200.000</span></div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1"><span>ZTE MC801A 5G Platform</span><span class="text-blue-700 font-bold">Rp175.000</span></div>
+                            <div class="flex justify-between"><span>Netgear Nighthawk M6 Premium</span><span class="text-blue-700 font-bold">Rp300.000</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-white precision-border p-md rounded-xl shadow-sm">
+                        <h3 class="font-bold text-primary text-sm mb-xs uppercase tracking-wide">Router & Access Point (Per Hari)</h3>
+                        <div class="space-y-xs text-sm font-medium mt-3 text-slate-700">
+                            <div class="flex justify-between border-b border-slate-100 pb-1"><span>TP-Link Deco M4 Mesh (2 Unit)</span><span class="text-blue-700 font-bold">Rp100.000</span></div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1"><span>TP-Link Deco X20 Wi-Fi 6 (3 Unit)</span><span class="text-blue-700 font-bold">Rp150.000</span></div>
+                            <div class="flex justify-between"><span>Ubiquiti UniFi AP AC Pro Outdoor</span><span class="text-blue-700 font-bold">Rp75.000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white precision-border p-md rounded-xl shadow-sm mt-md">
+                    <h3 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-sm">Aksesoris Utilitas Jaringan & Signal Booster (Harga Per Hari)</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-sm text-sm text-slate-700">
+                        <div class="p-2 bg-slate-50 rounded flex justify-between"><span>Power Bank Kapasitas 10.000mAh</span><span class="text-primary font-bold">Rp20.000</span></div>
+                        <div class="p-2 bg-slate-50 rounded flex justify-between"><span>Power Bank Kapasitas 20.000mAh</span><span class="text-primary font-bold">Rp30.000</span></div>
+                        <div class="p-2 bg-slate-50 rounded flex justify-between"><span>Antena Eksternal Penguat Sinyal 4G</span><span class="text-primary font-bold">Rp40.000</span></div>
+                        <div class="p-2 bg-slate-50 rounded flex justify-between"><span>Antena Eksternal Penguat Sinyal 5G Omni</span><span class="text-primary font-bold">Rp80.000</span></div>
+                        <div class="p-2 bg-slate-50 rounded flex justify-between"><span>Waterproof Case Modem Outdoor Enclosure</span><span class="text-primary font-bold">Rp25.000</span></div>
+                        <div class="p-2 bg-slate-50 rounded flex justify-between"><span>Tiang Antena Portable (Tinggi Konstruksi 3m)</span><span class="text-primary font-bold">Rp50.000</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-600 text-white font-semibold text-xs py-3 rounded-xl mt-md shadow-sm text-center">
+                    <span class="material-symbols-outlined text-xs align-middle mr-1">sim_card</span>
+                    Kombinasi Kartu SIM Tersedia Opsi (Telkomsel / Indosat / XL) | Paket Live Streaming Terpadu Mulai Rp150.000 / Hari
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            <h2 class="font-headline-lg text-2xl font-bold text-primary mb-sm text-center">AKSESORIS PENDUKUNG PRODUKSI & EVENT</h2>
+            <p class="text-slate-500 text-sm mb-lg text-center">Detail kelengkapan penyimpanan media data digital, rigging fisik, dan pemanis dekorasi (Sewa Per Hari)</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md text-sm font-semibold">
+                <div class="precision-border p-md rounded-xl bg-white space-y-sm shadow-sm">
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>SD Card Ultra High Speed 64GB</span><span class="text-blue-700">Rp30.000</span></div>
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>CFast Extreme Speed 128GB Card</span><span class="text-blue-700">Rp80.000</span></div>
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Baterai Ekstra Cadangan Kamera</span><span class="text-blue-700">Rp25.000</span></div>
+                </div>
+                <div class="precision-border p-md rounded-xl bg-white space-y-sm shadow-sm">
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>External Monitor 5" (Atomos Ninja V)</span><span class="text-blue-700">Rp200.000</span></div>
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Hampasan Karpet Alas Tenda (Per Meter)</span><span class="text-blue-700">Rp15.000/m</span></div>
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Sistem Lampu Gantung String Festoon</span><span class="text-blue-700">Rp50.000</span></div>
+                </div>
+                <div class="precision-border p-md rounded-xl bg-white space-y-sm shadow-sm">
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Pagar Pembatas Panggung Barrier (Per Meter)</span><span class="text-blue-700">Rp25.000/m</span></div>
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Kain Penutup Dinding Struktur Tenda</span><span class="text-blue-700">Rp50.000</span></div>
+                    <div class="flex justify-between p-2 bg-slate-50 rounded"><span>Hardcase Pelindung Rigid Anti Guncang (Pelican)</span><span class="text-blue-700">Rp75.000</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl bg-slate-800 text-white" id="terms">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <h2 class="text-2xl font-bold mb-lg text-center tracking-wide uppercase text-amber-500">SYARAT & KETENTUAN UTAMA SEWA</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md text-sm">
+                    <div class="p-md border border-slate-700 rounded-xl bg-slate-900/50 hover:bg-slate-900/80 transition-all flex gap-sm items-start">
+                        <span class="material-symbols-outlined text-amber-500 text-3xl">timer</span>
+                        <div>
+                            <h4 class="font-bold mb-xs text-slate-100">Durasi Perhitungan</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Sistem durasi dihitung 1 hari (24 Jam). Ambil H-1 mulai pukul 14.00 WIB dan wajib kembali H+1 maksimal pukul 14.00 WIB.</p>
+                        </div>
+                    </div>
+                    <div class="p-md border border-slate-700 rounded-xl bg-slate-900/50 hover:bg-slate-900/80 transition-all flex gap-sm items-start">
+                        <span class="material-symbols-outlined text-amber-500 text-3xl">payments</span>
+                        <div>
+                            <h4 class="font-bold mb-xs text-slate-100">Deposit & Jaminan Fiskal</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Unit Kamera/Drone wajib menyertakan KTP+SIM penanggung jawab asli serta deposit 30% harga pasar baru alat. Sistem tenda wajib DP 50% di awal.</p>
+                        </div>
+                    </div>
+                    <div class="p-md border border-slate-700 rounded-xl bg-slate-900/50 hover:bg-slate-900/80 transition-all flex gap-sm items-start">
+                        <span class="material-symbols-outlined text-amber-500 text-3xl">warning</span>
+                        <div>
+                            <h4 class="font-bold mb-xs text-slate-100">Denda Keterlambatan</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Kelalaian pengembalian melewati batas jam durasi sewa yang ditentukan akan dikenakan denda akumulatif sebesar Rp50.000 hingga Rp100.000 per jam.</p>
+                        </div>
+                    </div>
+                    <div class="p-md border border-slate-700 rounded-xl bg-slate-900/50 hover:bg-slate-900/80 transition-all flex gap-sm items-start">
+                        <span class="material-symbols-outlined text-amber-500 text-3xl">build</span>
+                        <div>
+                            <h4 class="font-bold mb-xs text-slate-100">Klausul Kerusakan Unit</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Segala bentuk cacat fungsi / fisik akibat kelalaian penggunaan wajib ditanggung penyewa melalui biaya service resmi pabrikan atau ganti rugi penuh seharga pasar.</p>
+                        </div>
+                    </div>
+                    <div class="p-md border border-slate-700 rounded-xl bg-slate-900/50 hover:bg-slate-900/80 transition-all flex gap-sm items-start">
+                        <span class="material-symbols-outlined text-amber-500 text-3xl">local_shipping</span>
+                        <div>
+                            <h4 class="font-bold mb-xs text-slate-100">Logistik Bebas Antar</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Bebas biaya pengiriman logistik untuk radius jangkauan maksimal 5 Km dari titik workshop. Area luar kota dikenakan tarif tambahan flat Rp10.000 / Km.</p>
+                        </div>
+                    </div>
+                    <div class="p-md border border-slate-700 rounded-xl bg-slate-900/50 hover:bg-slate-900/80 transition-all flex gap-sm items-start">
+                        <span class="material-symbols-outlined text-amber-500 text-3xl">gas_pump</span>
+                        <div>
+                            <h4 class="font-bold mb-xs text-slate-100">Konsumsi Bahan Bakar</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed">Pengadaan konsumsi bahan bakar (BBM minyak) operasional unit Genset sepenuhnya menjadi beban tanggung jawab pihak penyewa di lapangan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-xl bg-gradient-to-r from-blue-900 to-indigo-900 text-white text-center">
+            <div class="max-w-max-width mx-auto px-margin-mobile">
+                <h2 class="text-2xl md:text-4xl font-extrabold mb-sm">Butuh rekomendasi paket lengkap?</h2>
+                <p class="text-slate-300 text-sm md:text-base max-w-2xl mx-auto mb-lg">Tim teknis spesialis kami siap membantu layanan konsultasi tata kelola alat gratis serta kustomisasi alokasi unit sesuai konsep acara Anda.</p>
+                <a href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20ingin%20konsultasi%20mengenai%20rekomendasi%20paket%20lengkap%20alat%20event." target="_blank" class="inline-flex items-center gap-xs bg-amber-500 text-slate-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition-all transform hover:-translate-y-0.5 text-sm">
+                    <span class="material-symbols-outlined font-bold text-sm">chat</span> Chat WA Sekarang
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-400 py-xl border-t border-slate-800">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl text-xs md:text-sm">
+                <div class="space-y-md">
+                    <div class="font-bold text-lg text-white">TRIPLE AUDIO</div>
+                    <p class="opacity-80 leading-relaxed">Technical Equipment Specialists. Solusi satu atap penyedia infrastruktur teknis handal, modern, dan presisi tinggi untuk segala ekosistem event Anda.</p>
+                    <div class="flex gap-sm">
+                        <a class="text-slate-400 hover:text-white transition-colors flex items-center" href="https://instagram.com/audio_triple" target="_blank"><span class="material-symbols-outlined text-sm mr-1">public</span>@audio_triple</a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white uppercase tracking-wider mb-md opacity-90">Hubungi Kontak Kami</h5>
+                    <ul class="space-y-sm opacity-80">
+                        <li>📍 JL. J.A. Suprapto 1A/249</li>
+                        <li>📞 0896-3522-5427 (WhatsApp Online)</li>
+                        <li>✉️ rentvision@event.id</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white uppercase tracking-wider mb-md opacity-90">Jam Operasional Toko</h5>
+                    <ul class="space-y-sm opacity-80">
+                        <li>Senin - Minggu: 08.00 - 21.00 WIB</li>
+                        <li class="text-amber-400 font-semibold">💡 Pengambilan fisik unit dilayani pada H-1 sore hari kerja.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-white uppercase tracking-wider mb-md opacity-90">Sistem Finansial</h5>
+                    <p class="opacity-80 mb-sm">Menerima opsi pembayaran tunai, mesin QRIS terintegrasi, dan transfer Bank BCA.</p>
+                    <p class="text-slate-300 font-semibold">Sistem Lock Jadwal Alat: Pembayaran uang muka (DP) minimal sebesar 50% dari nominal total nota sewa.</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-900 pt-md text-center opacity-60 text-xs">© 2026 TRIPLE AUDIO. Technical Equipment Specialists. Solusi alat pesta, foto video, sound, kabel, modem & event. All Rights Reserved.</div>
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/6289635225427?text=Halo%20Triple%20Audio,%20saya%20tertarik%20untuk%20menyewa%20alat%20event" class="floating-wa" target="_blank" title="Chat WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-[100]" href="https://wa.me/6289635225427?text=Halo%20TRIPLE%20AUDIO,%20saya%20tertarik%20ingin%20tanya%20detail%20mengenai%20sewa%20peralatan%20event." target="_blank" title="Hubungi WhatsApp Admin">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.512-2.96-2.626-.087-.114-.694-.925-.694-1.765 0-.84.438-1.248.595-1.424.129-.145.34-.209.49-.209.114 0 .229.002.328.005.105.002.247-.04.386.297.144.344.492 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289-.087.101-.183.226-.26.304-.087.087-.177.182-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.088.275.073.377-.043.101-.116.435-.507.55-.68.115-.174.229-.145.386-.087.156.058.989.467 1.161.554.173.088.289.13.332.203.043.073.043.419-.101.824z"></path>
+        </svg>
     </a>
 
 </body>
